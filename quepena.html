@@ -10,18 +10,16 @@
    
     <img src="./UrsoPicaPau.gif" alt="" class="background">
 
-<audio id="background-audio" loop>
-    <source src="https://www.myinstants.com/media/sounds/musica mais triste do universo.mp3" type="audio/mpeg">
+<audio id="background-audio" >
+    <source src="https://www.myinstants.com/media/sounds/musica-mais-triste-do-universo.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
 </audio>
 
-<button onclick="playAudio()">Clique para tocar o áudio</button>
-
 <script>
-    function playAudio() {
+    document.body.addEventListener('click', () => {
         const audio = document.getElementById('background-audio');
         audio.play();
-    }
+    }, { once: true }); // Só precisa clicar uma vez
 </script>
 	
 </body>
